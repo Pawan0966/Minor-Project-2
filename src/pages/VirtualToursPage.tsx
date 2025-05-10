@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
-import { Map, Users, Clock, Leaf, Star, BookOpen, Brain, Heart, Shield, Plant, ArrowRight, Check } from 'lucide-react';
+import { Map, Users, Clock, Leaf, Star, BookOpen, Brain, Heart, Shield, Plane as Plant, ArrowRight, Check } from 'lucide-react';
 import { VirtualTour } from '../types';
 
 const VirtualToursPage: React.FC = () => {
