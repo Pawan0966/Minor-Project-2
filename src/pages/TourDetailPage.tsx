@@ -18,7 +18,7 @@ const TourDetailPage: React.FC = () => {
       try {
         // Simulated API response
         const mockTour: VirtualTour = {
-          id: '1',
+          id: '2',
           title: 'Digestive Health Garden',
           description: 'Explore herbs and plants known for their digestive healing properties in Ayurvedic medicine. This guided tour will introduce you to the most effective medicinal plants used traditionally for digestive health.',
           plants: ['tulsi', 'ginger', 'mint'],

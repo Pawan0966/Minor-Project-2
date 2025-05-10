@@ -6,6 +6,7 @@ const plantRoutes = require('./routes/plants');
 const userRoutes = require('./routes/users');
 const tourRoutes = require('./routes/tours');
 const chatbotRoutes = require('./routes/chatbot');
+const path = require('path');
 
 dotenv.config();
 
@@ -13,6 +14,9 @@ const app = express();
 
 app.use(cors());
 app.use(express.json());
+
+// Serve static files from the public directory
+app.use(express.static(path.join(__dirname, '../public')));
 
 // Connect to MongoDB
 mongoose.connect(process.env.MONGODB_URI)
