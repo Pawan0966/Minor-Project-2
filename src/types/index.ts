@@ -52,6 +52,8 @@ export interface VirtualTour {
   duration: number;
   difficulty: string;
   participants: number;
+  rating: number;
+  reviews: number;
 }
 
 export interface GardenPlant {
