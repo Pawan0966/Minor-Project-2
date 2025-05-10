@@ -15,6 +15,9 @@ const app = express();
 app.use(cors());
 app.use(express.json());
 
+// Serve 3D model files from the models directory
+app.use('/models', express.static(path.join(__dirname, '../public/models')));
+
 // Serve static files from the public directory
 app.use(express.static(path.join(__dirname, '../public')));
 
