@@ -15,11 +15,14 @@ const app = express();
 app.use(cors());
 app.use(express.json());
 
-// Serve 3D model files from the models directory
-app.use('/models', express.static(path.join(__dirname, '../public/models')));
-
-// Serve static files from the public directory
+// Serve static files from the public directory first
 app.use(express.static(path.join(__dirname, '../public')));
+
+// Specific route for serving 3D model files with correct MIME type
+app.use('/models', (req, res, next) => {
+  res.set('Content-Type', 'model/gltf-binary');
+  next();
+}, express.static(path.join(__dirname, '../public/models')));
 
 // Connect to MongoDB
 mongoose.connect(process.env.MONGODB_URI)
